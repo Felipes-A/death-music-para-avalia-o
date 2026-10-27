@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interface</title>
+    <script src="https://kit.fontawesome.com/deb687aa38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="interface.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="nav-logo">
+                <img src="imagens/felipe logo principal.jpeg" alt="Death Music logo" class="brand-logo">
+            </div>
+            <div class="nav-library">
+                <i class="fa-solid fa-book"></i>
+                <p>sua biblioteca +</p>
+            </div>
+            <div class="nav-playlist">
+                <h3>Minha Playlist:</h3>
+                <button id="adicionar-playlist">Adicionar música à playlist</button>
+                <div class="playlist-controls">
+                    <button id="prev-track">◀</button>
+                    <button id="play-playlist">▶ play</button>
+                    <button id="next-track">▶</button>
+                </div>
+                <ul id="lista-playlist"></ul>
+                <p id="playlist-status">Nenhuma música na playlist.</p>
+            </div>
+            <div class="nav-footer">
+                <a href="#">legal</a>
+                <a href="#">centro de privacidade</a>
+                <a href="#">politica de privacidade</a>
+                <a href="#">cookies</a>
+                <a href="#">acessibilidade</a>
+            </div>
+            <button class="nav-lang-button">
+                <i class="fa-solid fa-globe"></i>
+                português Brasil
+            </button>
+        </nav>
+
+        <main>
+            <header class="top-header">
+                <div class="header-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="search-input" placeholder="o que você quer ouvir?">
+                </div>
+
+                <a class="auth-link" href="cadastro e login/login.html">
+                    <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+                    <span>Entrar</span>
+                </a>
+
+                <div class="profile-menu-wrap">
+                    <button class="profile-button" id="profile-button" type="button" aria-expanded="false" aria-controls="profile-panel">
+                        <div class="profile-avatar-fallback" id="profile-avatar-fallback">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <img id="profile-avatar" alt="Foto do perfil" hidden>
+                        <span class="profile-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                    </button>
+
+                    <div class="profile-panel" id="profile-panel" hidden>
+                        <div class="profile-header-card">
+                            <div class="profile-avatar-fallback panel-avatar-fallback" id="profile-panel-avatar-fallback">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <img id="profile-panel-avatar" alt="Foto de perfil" hidden>
+                            <div class="profile-texts">
+                                <strong id="profile-name">Usuário</strong>
+                                <small id="profile-email">usuario@email.com</small>
+                            </div>
+                        </div>
+
+                        <button type="button" class="profile-photo-button" id="profile-photo-button">
+                            <i class="fa-solid fa-camera"></i>
+                            Escolher foto
+                        </button>
+                        <input type="file" id="profile-photo-input" accept="image/*" hidden>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content">
+                <div class="cards-actions">
+                    <!--
+                    <button id="add-empty-player" class="add-empty-player-btn" type="button">+ Criar player vazio</button>
+                    -->
+                </div>
+
+                <p id="search-empty-state" class="search-empty-state">Nenhuma música encontrada para esta busca.</p>
+                <div class="cards-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
